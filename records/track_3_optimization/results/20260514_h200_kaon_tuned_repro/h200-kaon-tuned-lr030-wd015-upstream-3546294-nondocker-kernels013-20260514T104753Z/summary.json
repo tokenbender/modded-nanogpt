@@ -1,0 +1,148 @@
+{
+  "artifacts": [
+    "stdout.log",
+    "stderr.log",
+    "train_log.txt",
+    "kaon.patch",
+    "kaon.diffstat.txt",
+    "train_gpt.py.snapshot",
+    "run.sh.snapshot",
+    "requirements.txt.snapshot",
+    "pip-freeze.txt",
+    "nvidia-smi-q.txt",
+    "upstream_commit.txt",
+    "upstream_commit_fuller.txt",
+    "git_status_short.txt",
+    "command.sh"
+  ],
+  "baseline_run": {
+    "run": "h200-upstream-3546294-nondocker-kernels013-clean-20260514T100755Z",
+    "step_avg_ms": 54.97,
+    "train_time_ms": 81354,
+    "val_loss": 3.2794
+  },
+  "comparison_to_baseline": {
+    "delta_step_avg_ms": 0.3299999999999983,
+    "delta_train_time_ms": 485,
+    "delta_val_loss": 0.01639999999999997,
+    "kaon_won": false
+  },
+  "env": {
+    "cuda": "12.8",
+    "datasets": "4.8.5",
+    "device_count": 8,
+    "fsspec": "2026.2.0",
+    "huggingface_hub": "1.14.0",
+    "kernels": "0.13.0",
+    "numpy": "2.4.4",
+    "platform": "Linux-6.8.0-100-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.10.0",
+    "triton": "3.6.0"
+  },
+  "env_compatibility": "same baseline env: kernels==0.13.0 with --no-deps, torch 2.10.0+cu128, fsspec 2026.2.0",
+  "execution": "non-Docker README path with patched train_gpt.py: python data/cached_fineweb10B.py 9; ./run.sh",
+  "final_validation": {
+    "line": "step:1480/1480 val_loss:3.2958 train_time:81839ms step_avg:55.30ms",
+    "step": 1480,
+    "step_avg_ms": 55.3,
+    "total_steps": 1480,
+    "train_time_ms": 81839,
+    "val_loss": 3.2958
+  },
+  "hardware": {
+    "driver": "580.126.09",
+    "gpu_count": 8,
+    "gpu_memory_mib_each": 143771,
+    "gpu_name": "NVIDIA H200"
+  },
+  "last_train_step": {
+    "step": 1480,
+    "step_avg_ms": 55.24,
+    "total_steps": 1480,
+    "train_time_ms": 81751
+  },
+  "name": "h200-kaon-tuned-lr030-wd015-upstream-3546294-nondocker-kernels013-20260514T104753Z",
+  "peak_memory": {
+    "allocated_mib": 31344,
+    "reserved_mib": 45826
+  },
+  "pod": "golden-fox-92",
+  "pod_name": "tokenbender-upstream-baseline-h200",
+  "prior_tuned_kaon_reference": "records/track_3_optimization/results/20260513_tokenbender_kaon_probe/train_gpt_simple_kaon_tuned.py used lr=0.030 weight_decay=0.015",
+  "return_code": 0,
+  "run_kind": "kaon_tuned_h200_latest_upstream_comparison",
+  "source_config_changes": [
+    "added kaon_express chaotic spectral map from prior tuned Kaon probe",
+    "replaced latest upstream Polar Express matrix update call with kaon_express",
+    "changed normuon_defaults lr from 0.023 to 0.030",
+    "changed normuon_defaults weight_decay from 1.2 to 0.015",
+    "kept current latest upstream model/data/schedule/Adam/NorMuon variance wrapper/communication path otherwise unchanged"
+  ],
+  "times": {
+    "data_download_done_utc": "2026-05-14T10:47:56Z",
+    "data_download_start_utc": "2026-05-14T10:47:56Z",
+    "train_done_utc": "2026-05-14T10:51:15Z",
+    "train_start_utc": "2026-05-14T10:47:56Z"
+  },
+  "upstream_commit": "3546294c065bef9fc351e1d34d11c542b5c98f70",
+  "upstream_repo": "https://github.com/KellerJordan/modded-nanogpt.git",
+  "validation_history": [
+    {
+      "line": "step:0/1480 val_loss:10.8276 train_time:0ms step_avg:0.03ms",
+      "step": 0,
+      "step_avg_ms": 0.03,
+      "total_steps": 1480,
+      "train_time_ms": 0,
+      "val_loss": 10.8276
+    },
+    {
+      "line": "step:250/1480 val_loss:4.5212 train_time:7396ms step_avg:29.58ms",
+      "step": 250,
+      "step_avg_ms": 29.58,
+      "total_steps": 1480,
+      "train_time_ms": 7396,
+      "val_loss": 4.5212
+    },
+    {
+      "line": "step:500/1480 val_loss:4.1946 train_time:15254ms step_avg:30.51ms",
+      "step": 500,
+      "step_avg_ms": 30.51,
+      "total_steps": 1480,
+      "train_time_ms": 15254,
+      "val_loss": 4.1946
+    },
+    {
+      "line": "step:750/1480 val_loss:3.7873 train_time:28867ms step_avg:38.49ms",
+      "step": 750,
+      "step_avg_ms": 38.49,
+      "total_steps": 1480,
+      "train_time_ms": 28867,
+      "val_loss": 3.7873
+    },
+    {
+      "line": "step:1000/1480 val_loss:3.5066 train_time:43513ms step_avg:43.51ms",
+      "step": 1000,
+      "step_avg_ms": 43.51,
+      "total_steps": 1480,
+      "train_time_ms": 43513,
+      "val_loss": 3.5066
+    },
+    {
+      "line": "step:1250/1480 val_loss:3.3735 train_time:63439ms step_avg:50.75ms",
+      "step": 1250,
+      "step_avg_ms": 50.75,
+      "total_steps": 1480,
+      "train_time_ms": 63439,
+      "val_loss": 3.3735
+    },
+    {
+      "line": "step:1480/1480 val_loss:3.2958 train_time:81839ms step_avg:55.30ms",
+      "step": 1480,
+      "step_avg_ms": 55.3,
+      "total_steps": 1480,
+      "train_time_ms": 81839,
+      "val_loss": 3.2958
+    }
+  ]
+}

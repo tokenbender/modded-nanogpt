@@ -1,0 +1,3 @@
+ M train_gpt.py
+?? .venv
+?? data/fineweb10B
