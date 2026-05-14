@@ -1,0 +1,119 @@
+{
+  "artifacts": [
+    "stdout.log",
+    "stderr.log",
+    "train_log.txt",
+    "run.sh.snapshot",
+    "train_gpt.py.snapshot",
+    "requirements.txt.snapshot",
+    "pip-freeze.txt",
+    "nvidia-smi-q.txt",
+    "upstream_commit.txt",
+    "upstream_commit_fuller.txt",
+    "git_status_short.txt",
+    "command.sh"
+  ],
+  "compatibility_note": "requirements.txt leaves kernels unpinned; current kernels 0.14.1 fails before training on varunneal/flash-attention-3 trust verification, so this baseline pins only kernels==0.13.0 with --no-deps. Use the same env for Kaon comparison.",
+  "env": {
+    "datasets": "4.8.5",
+    "fsspec": "2026.2.0",
+    "huggingface_hub": "1.14.0",
+    "kernels": "0.13.0",
+    "numpy": "2.4.4",
+    "platform": "Linux-6.8.0-100-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "torch": "2.10.0",
+    "triton": "3.6.0"
+  },
+  "execution": "non-docker README path: python data/cached_fineweb10B.py 9; ./run.sh",
+  "final_validation": {
+    "step": 1480,
+    "step_avg_ms": 54.97,
+    "total_steps": 1480,
+    "train_time_ms": 81354,
+    "val_loss": 3.2794
+  },
+  "hardware": {
+    "driver": "580.126.09",
+    "gpu_count": 8,
+    "gpu_memory_mib_each": 143771,
+    "gpu_name": "NVIDIA H200"
+  },
+  "last_train_step": {
+    "step": 1480,
+    "step_avg_ms": 54.91,
+    "total_steps": 1480,
+    "train_time_ms": 81266
+  },
+  "latest_upstream_verified_after_run": true,
+  "latest_upstream_verified_ref": "master/HEAD at 3546294c065bef9fc351e1d34d11c542b5c98f70",
+  "name": "h200-upstream-3546294-nondocker-kernels013-clean-20260514T100755Z",
+  "peak_memory": {
+    "allocated_mib": 31344,
+    "reserved_mib": 45826
+  },
+  "pod": "golden-fox-92",
+  "pod_name": "tokenbender-upstream-baseline-h200",
+  "return_code": 0,
+  "run_kind": "upstream_baseline",
+  "source_config_changes": "none",
+  "times": {
+    "data_download_done_utc": "2026-05-14T10:08:01Z",
+    "data_download_start_utc": "2026-05-14T10:08:00Z",
+    "train_done_utc": "2026-05-14T10:16:50Z",
+    "train_start_utc": "2026-05-14T10:08:01Z"
+  },
+  "upstream_commit": "3546294c065bef9fc351e1d34d11c542b5c98f70",
+  "upstream_repo": "https://github.com/KellerJordan/modded-nanogpt.git",
+  "validation_history": [
+    {
+      "step": 0,
+      "step_avg_ms": 0.03,
+      "total_steps": 1480,
+      "train_time_ms": 0,
+      "val_loss": 10.8317
+    },
+    {
+      "step": 250,
+      "step_avg_ms": 29.38,
+      "total_steps": 1480,
+      "train_time_ms": 7345,
+      "val_loss": 4.5079
+    },
+    {
+      "step": 500,
+      "step_avg_ms": 30.31,
+      "total_steps": 1480,
+      "train_time_ms": 15153,
+      "val_loss": 4.2133
+    },
+    {
+      "step": 750,
+      "step_avg_ms": 38.26,
+      "total_steps": 1480,
+      "train_time_ms": 28697,
+      "val_loss": 3.796
+    },
+    {
+      "step": 1000,
+      "step_avg_ms": 43.25,
+      "total_steps": 1480,
+      "train_time_ms": 43246,
+      "val_loss": 3.5095
+    },
+    {
+      "step": 1250,
+      "step_avg_ms": 50.46,
+      "total_steps": 1480,
+      "train_time_ms": 63070,
+      "val_loss": 3.3676
+    },
+    {
+      "step": 1480,
+      "step_avg_ms": 54.97,
+      "total_steps": 1480,
+      "train_time_ms": 81354,
+      "val_loss": 3.2794
+    }
+  ]
+}

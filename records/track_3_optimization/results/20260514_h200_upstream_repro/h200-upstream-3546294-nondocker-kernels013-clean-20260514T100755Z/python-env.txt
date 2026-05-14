@@ -1,0 +1,7 @@
+python 3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]
+torch 2.10.0+cu128
+cuda 12.8
+cuda_available True
+device_count 8
+kernels 0.13.0
+fsspec 2026.2.0
