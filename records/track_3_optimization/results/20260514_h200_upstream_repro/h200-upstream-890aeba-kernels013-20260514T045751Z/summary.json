@@ -1,0 +1,18 @@
+{
+  "kind": "h200_upstream_repro",
+  "pod": "gentle-lion-96",
+  "gpu": "8x NVIDIA H200",
+  "upstream_commit": "890aeba91b5f3c8b32c22d520c07991ee6ca2e2f",
+  "run_dir": "/root/outputs/modded-nanogpt-h200-repro/runs/h200-upstream-890aeba-kernels013-20260514T045751Z",
+  "finished_utc": "2026-05-14T05:08:27.237122+00:00",
+  "return_code": 0,
+  "final_line": "step:1480/1480 val_loss:3.2791 train_time:81361ms step_avg:54.97ms",
+  "metrics": {
+    "step": 1480,
+    "total_steps": 1480,
+    "val_loss": 3.2791,
+    "train_time_ms": 81361,
+    "step_avg_ms": 54.97
+  },
+  "dependency_note": "Installed kernels==0.13.0 in the environment because current unpinned kernels==0.14.0 requires trust_remote_code=True for varunneal/flash-attention-3 before upstream training starts. Upstream source and run.sh were not edited."
+}
