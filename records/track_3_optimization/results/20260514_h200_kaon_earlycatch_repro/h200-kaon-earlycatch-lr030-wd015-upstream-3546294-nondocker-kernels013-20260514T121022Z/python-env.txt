@@ -1,0 +1,2 @@
+3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]
+Linux-6.8.0-100-generic-x86_64-with-glibc2.39

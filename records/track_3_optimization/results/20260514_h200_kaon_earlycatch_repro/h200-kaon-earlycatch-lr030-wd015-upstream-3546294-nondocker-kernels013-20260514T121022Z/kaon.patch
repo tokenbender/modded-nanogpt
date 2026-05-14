@@ -1,0 +1,67 @@
+diff --git a/train_gpt.py b/train_gpt.py
+index da7f7ff..c33935f 100644
+--- a/train_gpt.py
++++ b/train_gpt.py
+@@ -247,6 +247,35 @@ def polar_express(grad_chunk: torch.Tensor, momentum_buffer: torch.Tensor, momen
+ 
+     return X
+ 
++
++# -----------------------------------------------------------------------------
++# Kaon early-catchup replacement for the matrix optimizer map
++
++@torch.compile(dynamic=False, fullgraph=True)
++def kaon_express(grad_chunk: torch.Tensor, momentum_buffer: torch.Tensor, momentum_t: torch.Tensor):
++    """Fused Nesterov momentum + Kaon chaotic spectral map."""
++    momentum = momentum_t.to(grad_chunk.dtype)
++    momentum_buffer.lerp_(grad_chunk, 1 - momentum)
++    g = grad_chunk.lerp_(momentum_buffer, momentum)
++
++    X = g.bfloat16()
++    transposed = g.size(-2) > g.size(-1)
++    if transposed:
++        X = X.mT
++
++    X = X / (X.norm(dim=(-2, -1), keepdim=True) + 1e-7)
++    I = torch.eye(X.size(-2), device=X.device, dtype=X.dtype)
++    for _ in range(5):
++        A = X @ X.mT
++        B = I - A
++        B = B @ B
++        X = 4.1 * (B @ X)
++
++    X = X / 1.175
++    if transposed:
++        X = X.mT
++    return X
++
+ # -----------------------------------------------------------------------------
+ # Sparse Comms for bigram embedding gradient reduce-scatter
+ def _sparse_comms_active():
+@@ -870,11 +899,9 @@ class NorMuonAndAdam:
+         self._eff_lr_t.fill_(p_cfg.lr_mul * p_cfg.lr)
+         self._eff_wd_t.fill_(p_cfg.wd_mul * p_cfg.weight_decay * p_cfg.lr)
+ 
+-        # Fused Nesterov momentum + Polar Express orthogonalization
+-        is_large_matrix = chunk_shape[-2] > 1024
+-        v_chunk = polar_express(
++        # Fused Nesterov momentum + Kaon chaotic spectral map.
++        v_chunk = kaon_express(
+             grad_chunk, p_state["momentum_buffer"], self._momentum_t,
+-            split_baddbmm=is_large_matrix,
+         )
+ 
+         # Variance reduction
+@@ -1725,10 +1752,10 @@ class TrainingManager():
+         )
+ 
+         normuon_defaults = dict(
+-            lr=0.023,
++            lr=0.030,
+             momentum=0.95,
+             beta2=0.9,
+-            weight_decay=1.2,
++            weight_decay=0.015,
+         )
+ 
+         self.optimizer = NorMuonAndAdam(

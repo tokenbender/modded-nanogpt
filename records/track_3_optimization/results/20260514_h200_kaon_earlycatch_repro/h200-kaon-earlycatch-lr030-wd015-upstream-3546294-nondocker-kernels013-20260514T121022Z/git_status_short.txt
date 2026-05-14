@@ -1,0 +1,7 @@
+ M train_gpt.py
+?? .venv/
+?? command.sh
+?? git_status_short.txt
+?? metadata.env
+?? upstream_commit.txt
+?? upstream_commit_fuller.txt
