@@ -1,0 +1,206 @@
+[
+  {
+    "run": "baseline-muon-4x-20260513T164855Z",
+    "status": "",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-20260513T164938Z",
+    "status": "state=running; started_at_utc=2026-05-13T16:49:40Z; stopped_at_utc=2026-05-13T16:52:00Z; state=stopped_before_training_log",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-ncclfix-20260513T170524Z",
+    "status": "",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-ncclfix-20260513T170610Z",
+    "status": "state=finished; exit_code=1; finished_at=2026-05-13T17:06:17Z",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-ncclfix-nobarrier-20260513T170849Z",
+    "status": "state=finished; exit_code=1; finished_at=2026-05-13T17:08:56Z; train_log=logs/974fc200-38a7-4b38-ab25-ee0d93c56d9b.txt",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-ncclfix-paddedbarrier-20260513T171035Z",
+    "status": "state=finished; exit_code=1; finished_at=2026-05-13T17:10:54Z; train_log=logs/35d4c77d-b184-4962-8509-639a71cd15be.txt",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-ncclfix-paddedcollectives-20260513T171241Z",
+    "status": "state=stopped_for_torch210_clean_baseline; stopped_at=2026-05-13T17:26:27Z; reason=torch210_installed_for_clean_upstream_baseline",
+    "last_val": {
+      "val_loss": "3.76297",
+      "train_time_s": 713.898,
+      "step_avg": "1111.05ms"
+    },
+    "num_val_points": 6
+  },
+  {
+    "run": "baseline-muon-4x-static-20260513T165508Z",
+    "status": "state=running; started_at_utc=2026-05-13T16:55:10Z; exit_code=1; ended_at_utc=2026-05-13T16:55:17Z; state=failed; train_log=logs/f8d22f00-8155-4888-b9ac-ddcb46d117cd.txt",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-static-nocompile-20260513T165850Z",
+    "status": "state=running; started_at_utc=2026-05-13T16:58:52Z; exit_code=1; ended_at_utc=2026-05-13T16:58:58Z; state=failed; train_log=logs/d9c6109f-71af-4573-a171-099032ef2d97.txt",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "baseline-muon-4x-torch210-clean-20260513T172725Z",
+    "status": "state=stopped_invalid_nan; stopped_at=2026-05-13T17:30:29Z; reason=val_loss_nan_at_step_125",
+    "last_val": {
+      "val_loss": "nan",
+      "train_time_s": 94.295,
+      "step_avg": "754.36ms"
+    },
+    "num_val_points": 4
+  },
+  {
+    "run": "baseline-muon-4x-torch27-paddedcollectives-20260513T173211Z",
+    "status": "state=finished; exit_code=0; finished_at=2026-05-13T18:36:35Z; train_log=logs/0cf54a35-808b-4d0d-b3b3-bfe73aac5398.txt",
+    "last_val": {
+      "val_loss": "3.27839",
+      "train_time_s": 3716.838,
+      "step_avg": "1111.24ms"
+    },
+    "num_val_points": 78
+  },
+  {
+    "run": "diagnostic-torch210-nocompile-130-20260513T173047Z",
+    "status": "exit_code=1",
+    "last_val": {
+      "val_loss": "10.82584",
+      "train_time_s": 0.0,
+      "step_avg": "nanms"
+    },
+    "num_val_points": 2
+  },
+  {
+    "run": "kaon-probe-aggressive-lr080-wd020-base120-20260513T204841Z",
+    "status": "state=stopped_after_step125; reason=underperforming_high_lr_probe; stopped_at=2026-05-13T20:54:20Z",
+    "last_val": {
+      "val_loss": "4.71238",
+      "train_time_s": 251.155,
+      "step_avg": "2009.24ms"
+    },
+    "num_val_points": 2
+  },
+  {
+    "run": "kaon-probe-control-lr035-wd025-20260513T204841Z",
+    "status": "state=running; started_at=2026-05-13T20:48:42Z",
+    "last_val": {
+      "val_loss": "3.63117",
+      "train_time_s": 1318.387,
+      "step_avg": "1856.72ms"
+    },
+    "num_val_points": 8
+  },
+  {
+    "run": "kaon-probe-high-lr100-wd015-base120-20260513T204841Z",
+    "status": "state=stopped_after_step125; reason=underperforming_high_lr_probe; stopped_at=2026-05-13T20:54:20Z",
+    "last_val": {
+      "val_loss": "4.75640",
+      "train_time_s": 251.753,
+      "step_avg": "2014.02ms"
+    },
+    "num_val_points": 2
+  },
+  {
+    "run": "kaon-probe-lr030-wd015-base100-20260513T205420Z",
+    "status": "state=running; started_at=2026-05-13T20:54:21Z",
+    "last_val": {
+      "val_loss": "3.76248",
+      "train_time_s": 950.302,
+      "step_avg": "1863.21ms"
+    },
+    "num_val_points": 5
+  },
+  {
+    "run": "kaon-probe-lr035-wd010-base100-20260513T205957Z",
+    "status": "state=running; started_at=2026-05-13T20:59:59Z",
+    "last_val": {
+      "val_loss": "4.10952",
+      "train_time_s": 482.315,
+      "step_avg": "1855.82ms"
+    },
+    "num_val_points": 3
+  },
+  {
+    "run": "kaon-probe-lr035-wd015-base100-20260513T205420Z",
+    "status": "state=running; started_at=2026-05-13T20:54:21Z",
+    "last_val": {
+      "val_loss": "3.76423",
+      "train_time_s": 950.113,
+      "step_avg": "1862.46ms"
+    },
+    "num_val_points": 5
+  },
+  {
+    "run": "kaon-probe-paperish-lr060-wd025-base120-20260513T204841Z",
+    "status": "state=stopped_after_step250; reason=underperforming_high_lr_probe; stopped_at=2026-05-13T20:59:57Z",
+    "last_val": {
+      "val_loss": "4.12773",
+      "train_time_s": 482.625,
+      "step_avg": "1856.12ms"
+    },
+    "num_val_points": 3
+  },
+  {
+    "run": "kaon-probe-sweep-20260513T204841Z",
+    "status": "state=running; started_at=2026-05-13T20:48:41Z",
+    "last_val": null,
+    "num_val_points": 0
+  },
+  {
+    "run": "kaon-pure-4x-torch27-paddedcollectives-20260513T184645Z",
+    "status": "state=finished; exit_code=0; finished_at=2026-05-13T19:50:51Z; train_log=logs/305d0baf-2111-4c61-a468-24ded0d07b04.txt",
+    "last_val": {
+      "val_loss": "3.28719",
+      "train_time_s": 3675.555,
+      "step_avg": "1077.29ms"
+    },
+    "num_val_points": 78
+  },
+  {
+    "run": "kaon-tuned-lr030-wd015-4x-torch27-paddedcollectives-20260513T211243Z",
+    "status": "state=finished; exit_code=0; finished_at=2026-05-13T22:16:53Z; train_log=logs/00a6c2ea-192a-4637-886b-97505fca32a6.txt",
+    "last_val": {
+      "val_loss": "3.28890",
+      "train_time_s": 3679.902,
+      "step_avg": "1076.72ms"
+    },
+    "num_val_points": 78
+  },
+  {
+    "run": "kaon-tuned-lr030-wd015-cd060-4x-torch27-paddedcollectives-20260513T224846Z",
+    "status": "state=stopped; reason=worse_than_muon_and_previous_tuned_by_step1375; stopped_at=2026-05-13T23:17:16Z",
+    "last_val": {
+      "val_loss": "3.56422",
+      "train_time_s": 1542.053,
+      "step_avg": "1112.39ms"
+    },
+    "num_val_points": 12
+  },
+  {
+    "run": "kaon-tuned-lr035-wd015-cd060-4x-torch27-paddedcollectives-20260513T221845Z",
+    "status": "state=stopped; reason=worse_than_muon_and_previous_tuned_by_step1375; stopped_at=2026-05-13T22:47:59Z",
+    "last_val": {
+      "val_loss": "3.53769",
+      "train_time_s": 1686.92,
+      "step_avg": "1120.71ms"
+    },
+    "num_val_points": 13
+  }
+]
