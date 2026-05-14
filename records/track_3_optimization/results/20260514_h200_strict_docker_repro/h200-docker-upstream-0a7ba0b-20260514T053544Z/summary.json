@@ -1,0 +1,12 @@
+{
+  "kind": "h200_strict_upstream_docker_repro",
+  "strict_faithfulness": true,
+  "pod": "gentle-lion-96",
+  "gpu": "8x NVIDIA H200",
+  "upstream_commit": "0a7ba0b1c6d8d38bd74491eff05b49c78c741ad7",
+  "method": "Upstream README Docker path: docker build -t modded-nanogpt .; docker run --rm --gpus all -v $(pwd):/modded-nanogpt modded-nanogpt python data/cached_fineweb10B.py 8; docker run --rm --gpus all -v $(pwd):/modded-nanogpt modded-nanogpt sh run.sh",
+  "return_code": 1,
+  "failure": "NVRTC compile failure: identifier \"__tanhf\" is undefined in ce_fwd_bwd_kernel.cu",
+  "finished_utc": "2026-05-14T05:46:49.641218+00:00",
+  "no_source_or_config_changes": true
+}

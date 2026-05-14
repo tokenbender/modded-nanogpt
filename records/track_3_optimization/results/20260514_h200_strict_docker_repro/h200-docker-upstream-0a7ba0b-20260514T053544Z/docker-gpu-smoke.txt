@@ -1,0 +1,23 @@
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.6.2
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+0, NVIDIA H200, 143771 MiB
+1, NVIDIA H200, 143771 MiB
+2, NVIDIA H200, 143771 MiB
+3, NVIDIA H200, 143771 MiB
+4, NVIDIA H200, 143771 MiB
+5, NVIDIA H200, 143771 MiB
+6, NVIDIA H200, 143771 MiB
+7, NVIDIA H200, 143771 MiB
